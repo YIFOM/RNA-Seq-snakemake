@@ -64,13 +64,13 @@ results/transcript_TPM_matrix.csv	Transcript-level TPM matrix
 **1. Dry run: check the execution plan without running anything**
 ```bash
 snakemake -n --cores 1
+```
 2. Full run with 20 cores
-
-
+```bash
 snakemake --cores 20
+```
 3. Generating Workflow Diagrams
-
-bash
+```bash
 snakemake --dag | dot -Tpng > dag.png
 
 
