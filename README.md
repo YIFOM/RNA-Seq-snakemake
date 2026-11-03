@@ -58,7 +58,12 @@ results/gene_count_matrix.csv	Gene-level count matrix
 results/transcript_count_matrix.csv	Transcript-level count matrix
 results/gene_TPM_matrix.csv	Gene-level TPM matrix
 results/transcript_TPM_matrix.csv	Transcript-level TPM matrix
+########## usage
+# 1. Dry run: check the execution plan without running anything
+snakemake -n --cores 1
 
+# 2. Full run with 20 cores
+snakemake --cores 20
 
 
 #Generating Workflow Diagrams
