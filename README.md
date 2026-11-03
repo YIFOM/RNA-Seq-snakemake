@@ -45,8 +45,8 @@ conda activate /path/to/envs/snakemake
 │   └── *.ht2                # HISAT2 index (or build with hisat2-build)
 └── results/                 # all outputs (created automatically at runtime)
 
-···
-#Raw reads
+
+##Raw reads
 data/{sample}.R1.raw.fastq.gz
 data/{sample}.R2.raw.fastq.gz
 #Outputs
@@ -58,19 +58,19 @@ results/gene_count_matrix.csv	Gene-level count matrix
 results/transcript_count_matrix.csv	Transcript-level count matrix
 results/gene_TPM_matrix.csv	Gene-level TPM matrix
 results/transcript_TPM_matrix.csv	Transcript-level TPM matrix
-
+```
 ## Usage
+
+**1. Dry run: check the execution plan without running anything**
 ```bash
-### 1. Dry run
-Check the execution plan without running anything:
 snakemake -n --cores 1
-Full run
-Run the pipeline with 20 cores:
+2. Full run with 20 cores
+
+
+snakemake --cores 20
+3. Generating Workflow Diagrams
 
 bash
-snakemake --cores 20
-
-#Generating Workflow Diagrams
 snakemake --dag | dot -Tpng > dag.png
 
 
